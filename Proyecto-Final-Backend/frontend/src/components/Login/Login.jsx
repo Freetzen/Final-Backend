@@ -8,7 +8,7 @@ export const Login = () => {
         const datosFormulario = new FormData(datForm.current) //Pasar de HTML a Objeto Iterable
         const cliente = Object.fromEntries(datosFormulario) //Pasar de objeto iterable a objeto simple
 
-        fetch('http://localhost:8080/auth/login', {
+        fetch('http://localhost:8080/api/session/login', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
